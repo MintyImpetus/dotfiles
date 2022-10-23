@@ -1,0 +1,8 @@
+#!/bin/sh
+
+fileName=$(mktemp)
+cloud="filesync@mimpetus.com:~/"
+scp "$cloud""$1" "$fileName" > /dev/null
+vim "$fileName"
+scp "$fileName" "$cloud""$1" & > /dev/null
+rm -f "$fileName" > /dev/null

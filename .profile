@@ -33,4 +33,4 @@ alias cat="batcat"
 
 export BAT_THEME=ansi-dark
 
-#export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin
