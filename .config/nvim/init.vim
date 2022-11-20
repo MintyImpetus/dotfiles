@@ -6,6 +6,7 @@ colorscheme gruvbox
 
 "Bindings
 let mapleader = ","
-:nnoremap <leader>f :History<enter>
+:nnoremap <leader>f :Files<enter>
+":nnoremap <leader>f :History<enter>
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
-
+autocmd VimEnter * COQnow -s
