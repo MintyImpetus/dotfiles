@@ -29,7 +29,7 @@ fi
 
 alias vim="nvim"
 alias v="nvim"
-alias cat="batcat"
+#alias cat="batcat"
 
 export BAT_THEME=ansi-dark
 
