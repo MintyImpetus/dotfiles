@@ -7,11 +7,12 @@ let g:colors_name = "creme"
 let s:palette = {}
 
 "let s:palette.white = [254, '#ede5d6']
-let s:palette.white = [254, '#f5f0e8']
+"let s:palette.white = [254, '#f5f0e8'] , Old, more white / pale background color
+let s:palette.white = [254, '#fffaf0']
 let s:palette.gray15 = [253, '#e4e4e4']
 let s:palette.gray14 = [250, '#bcbcbc']
-"let s:palette.gray13 = [249, '#e5d8c6']
-let s:palette.gray13 = [249, '#ede5d6']
+let s:palette.gray13 = [249, '#fdf5e6']
+"let s:palette.gray13 = [249, '#ede5d6']
 "let s:palette.gray13 = [249, '#b2b2b2']
 let s:palette.gray12 = [248, '#a8a8a8']
 let s:palette.gray11 = [247, '#9e9e9e']
