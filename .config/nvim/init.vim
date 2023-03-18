@@ -3,6 +3,7 @@ lua require('plugins')
 "Colorscheme
 set background=dark " or light if you want light mode
 colorscheme kanagawabones
+set termguicolors
 
 "Bindings
 let mapleader = ";"
