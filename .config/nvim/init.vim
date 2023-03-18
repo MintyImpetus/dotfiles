@@ -1,8 +1,8 @@
 lua require('plugins')
 
 "Colorscheme
-set background=light " or light if you want light mode
-colorscheme creme
+set background=dark " or light if you want light mode
+colorscheme kanagawabones
 
 "Bindings
 let mapleader = ";"
