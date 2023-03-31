@@ -8,5 +8,17 @@ $HOME/Coding/git/dotfiles"
 echo "$GITREPOS" | while read repo; do
 	printf "$repo: "
 	cd "$repo"
-	git status || echo failed
-done
+	if [ "$(git status | grep ahead)" ]; then
+		echo "	push"
+	else
+	if [ "$(git status | grep committed)" ]; then
+		echo "	commit"
+	else
+	if [ "$(git status | grep nothing)" ]; then
+		echo "	clean"
+	else
+		echo "	unknown"
+	fi
+	fi
+	fi
+done | column -t
