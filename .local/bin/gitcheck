@@ -7,15 +7,17 @@ $HOME/Coding/git/villsim
 $HOME/Coding/git/dotfiles"
 
 output="$(echo "$GITREPOS" | while read repo; do
-	printf "$repo: "
 	cd "$repo"
 	if [ "$(git status | grep committed)" ]; then
-		echo "	commit"
+		w=w
 	else if [ "$(git status | grep ahead)" ]; then
+		printf "$repo: "
 		echo "	push"
 	else if [ "$(git status | grep nothing)" ]; then
+		printf "$repo: "
 		echo "	clean"
 	else
+		printf "$repo: "
 		echo "	unknown"
 	fi
 	fi
