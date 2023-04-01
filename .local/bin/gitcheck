@@ -6,7 +6,7 @@ $HOME/Coding/git/miler
 $HOME/Coding/git/villsim
 $HOME/Coding/git/dotfiles"
 
-echo "$GITREPOS" | while read repo; do
+output="$(echo "$GITREPOS" | while read repo; do
 	printf "$repo: "
 	cd "$repo"
 	if [ "$(git status | grep committed)" ]; then
@@ -20,4 +20,5 @@ echo "$GITREPOS" | while read repo; do
 	fi
 	fi
 	fi
-done | column -t
+done)"
+[ "$(echo "$output" | grep -v clean)" ] && echo "$output" | column -t || echo "All clean!"
