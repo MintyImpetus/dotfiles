@@ -7,13 +7,13 @@ $HOME/Coding/git/villsim
 $HOME/Coding/git/dotfiles"
 
 output="$(echo "$GITREPOS" | while read repo; do
-	cd "$repo"
-	if [ "$(git status | grep committed)" ]; then
+	cd "$repo" 2>/dev/null
+	if [ "$(git status 2>/dev/null | grep committed)" ]; then
 		w=w
-	else if [ "$(git status | grep ahead)" ]; then
+	else if [ "$(git status 2>/dev/null | grep ahead)" ]; then
 		printf "$repo: "
 		echo "	push"
-	else if [ "$(git status | grep nothing)" ]; then
+	else if [ "$(git status 2>/dev/null | grep nothing)" ]; then
 		printf "$repo: "
 		echo "	clean"
 	else
