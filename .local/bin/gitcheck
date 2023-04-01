@@ -11,11 +11,9 @@ echo "$GITREPOS" | while read repo; do
 	cd "$repo"
 	if [ "$(git status | grep committed)" ]; then
 		echo "	commit"
-	else
-	if [ "$(git status | grep ahead)" ]; then
+	else if [ "$(git status | grep ahead)" ]; then
 		echo "	push"
-	else
-	if [ "$(git status | grep nothing)" ]; then
+	else if [ "$(git status | grep nothing)" ]; then
 		echo "	clean"
 	else
 		echo "	unknown"
