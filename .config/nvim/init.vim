@@ -16,5 +16,8 @@ let mapleader = ","
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 autocmd VimEnter * COQnow -s
 
+"Vimwiki settings
 set nocompatible
 filetype plugin on
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki'}]
+let g:vimwiki_global_ext = 0
