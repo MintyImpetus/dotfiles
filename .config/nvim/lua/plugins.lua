@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
 	use { 'ms-jpq/coq_nvim', branch = 'coq' }
 	use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
 	use { 'ms-jpq/coq.thirdparty', branch = '3p'}
+	use({ "typicode/bg.nvim" })
 	use 'mcchrish/zenbones.nvim'
 	use 'vimwiki/vimwiki'
 	use 'rktjmp/lush.nvim'
