@@ -1,35 +1,15 @@
-# ~/.profile: executed by the command interpreter for login shells.
-# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
-# exists.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
+#!/bin/sh
+PATH=$PATH:~/.local/bin
+PATH=$PATH:/usr/local/go/bin
+PLAN9=/home/mi/Coding/git/plan9port export PLAN9
+PATH=$PATH:$PLAN9/bin export PATH
 
-# the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
-#umask 022
+alias gca='git commit -am '
+alias rsync='rsync -rh --progress '
+alias ytaudio='yt-dlp -f ba -x --audio-format mp3 '
+alias nsxiv='nsxiv -pa'
+alias discord='dbus-run-session discord'
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-alias vim="nvim"
-alias v="nvim"
-#alias cat="batcat"
-
-export BAT_THEME=ansi-dark
-
-export PATH=$PATH:/usr/local/go/bin
+[ -f /tmp/startxran ] && startxran="true"
+[ -z $DISPLAY ] && [ -z "$startxran" ] && startx && exit
+startxran=""
