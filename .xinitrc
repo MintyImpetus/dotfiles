@@ -38,5 +38,8 @@ sh ~/scripts/dwmdaemon &
 #setwallpaper &
 #xinput --set-prop 9 'libinput Accel Profile Enabled' 0, 1
 #xinput set-prop '9' 'libinput Accel Speed' -0.8
+/usr/libexec/xfce-polkit &
+#xfce-polkit &
 dwm
+#dbus-run-session dwm
 rm /tmp/startxran
