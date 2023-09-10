@@ -40,6 +40,5 @@ sh ~/scripts/dwmdaemon &
 #xinput set-prop '9' 'libinput Accel Speed' -0.8
 /usr/libexec/xfce-polkit &
 #xfce-polkit &
-dwm
-#dbus-run-session dwm
+dbus-run-session dwm
 rm /tmp/startxran
