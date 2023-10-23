@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
 	use { "ellisonleao/gruvbox.nvim" }
 	use {"ntk148v/komau.vim"}
 	use 'pgdouyon/vim-yin-yang'
+	use 'pocco81/auto-save.nvim'
 --	use 'plan9-for-vimspace/acme-colors'
 	use 'huyvohcmc/atlas.vim'
 	use 'junegunn/fzf'
