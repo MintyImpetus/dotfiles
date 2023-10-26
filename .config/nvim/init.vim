@@ -2,7 +2,7 @@ lua require('plugins')
 
 "Colorscheme
 set background=dark " or light if you want light mode
-colorscheme zenbones
+colorscheme gruvbox
 set termguicolors
 
 "Bindings
